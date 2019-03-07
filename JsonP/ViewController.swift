@@ -7,6 +7,10 @@ class ViewController: UIViewController {
     UserRequest().call { (users) in
       print(users)
     }
+
+    PostsRequest().call { (posts) in
+      print(posts)
+    }
   }
 }
 

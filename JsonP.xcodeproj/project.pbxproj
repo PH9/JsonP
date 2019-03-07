@@ -14,9 +14,10 @@
 		65925DA72230D2330035042E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65925DA52230D2330035042E /* LaunchScreen.storyboard */; };
 		65925DBF2230D36F0035042E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65925DBE2230D36F0035042E /* Alamofire.framework */; };
 		65925DC32230D7E20035042E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC22230D7E20035042E /* User.swift */; };
-		65925DC52230D86F0035042E /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC42230D86F0035042E /* UserRequest.swift */; };
+		65925DC52230D86F0035042E /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC42230D86F0035042E /* UsersRequest.swift */; };
 		65925DC72230D9BB0035042E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC62230D9BB0035042E /* RequestProtocol.swift */; };
 		65925DC92230DAF60035042E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC82230DAF60035042E /* Post.swift */; };
+		65925DCB2230DB320035042E /* PostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DCA2230DB320035042E /* PostsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,10 @@
 		65925DB32230D2330035042E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65925DBE2230D36F0035042E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		65925DC22230D7E20035042E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		65925DC42230D86F0035042E /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		65925DC42230D86F0035042E /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 		65925DC62230D9BB0035042E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		65925DC82230DAF60035042E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		65925DCA2230DB320035042E /* PostsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				65925DC22230D7E20035042E /* User.swift */,
-				65925DC42230D86F0035042E /* UserRequest.swift */,
+				65925DC42230D86F0035042E /* UsersRequest.swift */,
 				65925DC62230D9BB0035042E /* RequestProtocol.swift */,
 				65925DC82230DAF60035042E /* Post.swift */,
+				65925DCA2230DB320035042E /* PostsRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,7 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65925DC52230D86F0035042E /* UserRequest.swift in Sources */,
+				65925DC52230D86F0035042E /* UsersRequest.swift in Sources */,
+				65925DCB2230DB320035042E /* PostsRequest.swift in Sources */,
 				65925D9F2230D2330035042E /* ViewController.swift in Sources */,
 				65925D9D2230D2330035042E /* AppDelegate.swift in Sources */,
 				65925DC92230DAF60035042E /* Post.swift in Sources */,

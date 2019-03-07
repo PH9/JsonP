@@ -5,13 +5,13 @@ struct UserRequest: RequestProtocol {
 
   let path = "/users"
 
-  func call(_ result: @escaping ([User]) -> Void) {
-    Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
+  func call(_ result: @escaping (Response) -> Void) {
+    Alamofire.request("https://jsonplaceholder.typicode.com\(path)").responseJSON { (response) in
       guard let data = response.data else {
         fatalError("body is nil")
       }
 
-      guard let users = try? JSONDecoder().decode([User].self, from: data) else {
+      guard let users = try? JSONDecoder().decode(Response.self, from: data) else {
         fatalError("cannot parse json")
       }
 
