@@ -2,6 +2,10 @@ import Alamofire
 
 typealias HTTPMethod = Alamofire.HTTPMethod
 
+enum Constaint {
+  static let endpoint = "https://jsonplaceholder.typicode.com"
+}
+
 enum RequestError: Error {
   case bodyIsNil
   case cannotParseJSON
@@ -22,7 +26,7 @@ extension RequestProtocol where Response: Decodable {
   }
 
   func call(_ result: @escaping (Result<Response>) -> Void) {
-    Alamofire.request("https://jsonplaceholder.typicode.com\(path)", method: method).responseJSON { (response) in
+    Alamofire.request("\(Constaint.endpoint)\(path)", method: method).responseJSON { (response) in
       guard let data = response.data else {
         result(.failure(.bodyIsNil))
         return
