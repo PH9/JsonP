@@ -25,7 +25,7 @@ extension RequestProtocol where Response: Decodable {
 
       let decoder = JSONDecoder()
       let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+      dateFormatter.dateFormat = Constaint.dateFormat
       decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
       guard let object = try? decoder.decode(Response.self, from: data) else {
