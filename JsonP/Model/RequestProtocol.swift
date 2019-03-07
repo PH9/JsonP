@@ -2,15 +2,6 @@ import Alamofire
 
 typealias HTTPMethod = Alamofire.HTTPMethod
 
-enum Constaint {
-  static let endpoint = "https://jsonplaceholder.typicode.com"
-}
-
-enum RequestError: Error {
-  case bodyIsNil
-  case cannotParseJSON
-}
-
 protocol RequestProtocol {
   associatedtype Response
 
