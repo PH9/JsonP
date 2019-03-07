@@ -2,13 +2,18 @@ import Alamofire
 
 typealias HTTPMethod = Alamofire.HTTPMethod
 
+enum RequestError: Error {
+  case bodyIsNil
+  case cannotParseJSON
+}
+
 protocol RequestProtocol {
   associatedtype Response
 
   var method: HTTPMethod { get }
   var path: String { get }
 
-  func call(_ result: @escaping (Response) -> Void)
+  func call(_ result: @escaping (Result<Response>) -> Void)
 }
 
 extension RequestProtocol where Response: Decodable {
@@ -16,10 +21,11 @@ extension RequestProtocol where Response: Decodable {
     return .get
   }
 
-  func call(_ result: @escaping (Response) -> Void) {
+  func call(_ result: @escaping (Result<Response>) -> Void) {
     Alamofire.request("https://jsonplaceholder.typicode.com\(path)", method: method).responseJSON { (response) in
       guard let data = response.data else {
-        fatalError("body is nil")
+        result(.failure(.bodyIsNil))
+        return
       }
 
       let decoder = JSONDecoder()
@@ -27,11 +33,12 @@ extension RequestProtocol where Response: Decodable {
       dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
       decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
-      guard let users = try? decoder.decode(Response.self, from: data) else {
-        fatalError("cannot parse json")
+      guard let object = try? decoder.decode(Response.self, from: data) else {
+        result(.failure(.cannotParseJSON))
+        return
       }
 
-      result(users)
+      result(.success(object))
     }
   }
 }
