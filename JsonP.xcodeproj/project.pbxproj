@@ -18,6 +18,7 @@
 		65925DC72230D9BB0035042E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC62230D9BB0035042E /* RequestProtocol.swift */; };
 		65925DC92230DAF60035042E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC82230DAF60035042E /* Post.swift */; };
 		65925DCB2230DB320035042E /* PostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DCA2230DB320035042E /* PostsRequest.swift */; };
+		65925DCE2230FC9E0035042E /* RequestProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		65925DC62230D9BB0035042E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		65925DC82230DAF60035042E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		65925DCA2230DB320035042E /* PostsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRequest.swift; sourceTree = "<group>"; };
+		65925DCC2230FC9E0035042E /* JsonPTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonPTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +122,13 @@
 		65925DC12230D7D60035042E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				65925DC22230D7E20035042E /* User.swift */,
-				65925DC42230D86F0035042E /* UsersRequest.swift */,
-				65925DC62230D9BB0035042E /* RequestProtocol.swift */,
 				65925DC82230DAF60035042E /* Post.swift */,
 				65925DCA2230DB320035042E /* PostsRequest.swift */,
+				65925DC62230D9BB0035042E /* RequestProtocol.swift */,
+				65925DC22230D7E20035042E /* User.swift */,
+				65925DC42230D86F0035042E /* UsersRequest.swift */,
+				65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */,
+				65925DCC2230FC9E0035042E /* JsonPTests-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 					};
 					65925DAC2230D2330035042E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 65925D982230D2320035042E;
 					};
 				};
@@ -267,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65925DCE2230FC9E0035042E /* RequestProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +470,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = JsonPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +481,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ph9.JsonPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JsonP/Model/JsonPTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonP.app/JsonP";
@@ -483,7 +494,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = JsonPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ph9.JsonPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JsonP/Model/JsonPTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonP.app/JsonP";
