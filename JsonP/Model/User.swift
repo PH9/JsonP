@@ -1,6 +1,7 @@
 struct User: Encodable {
   let id: Int
   let name: String
+  let address: Address
 }
 
 struct Address: Encodable {
