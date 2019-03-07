@@ -17,7 +17,7 @@ extension RequestProtocol where Response: Decodable {
   }
 
   func call(_ result: @escaping (Result<Response>) -> Void) {
-    Alamofire.request("\(Constaint.endpoint)\(path)", method: method).responseJSON { (response) in
+    Alamofire.request("\(Constant.endpoint)\(path)", method: method).responseJSON { (response) in
       guard let data = response.data else {
         result(.failure(.bodyIsNil))
         return
@@ -25,7 +25,7 @@ extension RequestProtocol where Response: Decodable {
 
       let decoder = JSONDecoder()
       let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = Constaint.dateFormat
+      dateFormatter.dateFormat = Constant.dateFormat
       decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
       guard let object = try? decoder.decode(Response.self, from: data) else {

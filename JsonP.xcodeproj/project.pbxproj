@@ -21,7 +21,7 @@
 		65925DCE2230FC9E0035042E /* RequestProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */; };
 		65925DD02230FFAE0035042E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DCF2230FFAE0035042E /* Result.swift */; };
 		65925DD22231014D0035042E /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DD12231014D0035042E /* RequestError.swift */; };
-		65925DD42231015C0035042E /* Constaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DD32231015C0035042E /* Constaint.swift */; };
+		65925DD42231015C0035042E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DD32231015C0035042E /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocolTests.swift; sourceTree = "<group>"; };
 		65925DCF2230FFAE0035042E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		65925DD12231014D0035042E /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		65925DD32231015C0035042E /* Constaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constaint.swift; sourceTree = "<group>"; };
+		65925DD32231015C0035042E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,16 +128,16 @@
 		65925DC12230D7D60035042E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65925DD32231015C0035042E /* Constant.swift */,
 				65925DCC2230FC9E0035042E /* JsonPTests-Bridging-Header.h */,
 				65925DC82230DAF60035042E /* Post.swift */,
 				65925DCA2230DB320035042E /* PostsRequest.swift */,
+				65925DD12231014D0035042E /* RequestError.swift */,
 				65925DC62230D9BB0035042E /* RequestProtocol.swift */,
 				65925DCD2230FC9E0035042E /* RequestProtocolTests.swift */,
 				65925DCF2230FFAE0035042E /* Result.swift */,
 				65925DC22230D7E20035042E /* User.swift */,
 				65925DC42230D86F0035042E /* UsersRequest.swift */,
-				65925DD12231014D0035042E /* RequestError.swift */,
-				65925DD32231015C0035042E /* Constaint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				65925DC52230D86F0035042E /* UsersRequest.swift in Sources */,
 				65925DCB2230DB320035042E /* PostsRequest.swift in Sources */,
 				65925D9F2230D2330035042E /* ViewController.swift in Sources */,
-				65925DD42231015C0035042E /* Constaint.swift in Sources */,
+				65925DD42231015C0035042E /* Constant.swift in Sources */,
 				65925D9D2230D2330035042E /* AppDelegate.swift in Sources */,
 				65925DC92230DAF60035042E /* Post.swift in Sources */,
 				65925DD02230FFAE0035042E /* Result.swift in Sources */,
