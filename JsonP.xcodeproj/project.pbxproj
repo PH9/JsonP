@@ -13,6 +13,7 @@
 		65925DA42230D2330035042E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65925DA32230D2330035042E /* Assets.xcassets */; };
 		65925DA72230D2330035042E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65925DA52230D2330035042E /* LaunchScreen.storyboard */; };
 		65925DBF2230D36F0035042E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65925DBE2230D36F0035042E /* Alamofire.framework */; };
+		65925DC32230D7E20035042E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65925DC22230D7E20035042E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		65925DAD2230D2330035042E /* JsonPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65925DB32230D2330035042E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65925DBE2230D36F0035042E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		65925DC22230D7E20035042E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		65925D9B2230D2320035042E /* JsonP */ = {
 			isa = PBXGroup;
 			children = (
+				65925DC12230D7D60035042E /* Model */,
 				65925D9C2230D2330035042E /* AppDelegate.swift */,
 				65925D9E2230D2330035042E /* ViewController.swift */,
 				65925DA02230D2330035042E /* Main.storyboard */,
@@ -103,6 +106,14 @@
 				65925DBE2230D36F0035042E /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65925DC12230D7D60035042E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65925DC22230D7E20035042E /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			files = (
 				65925D9F2230D2330035042E /* ViewController.swift in Sources */,
 				65925D9D2230D2330035042E /* AppDelegate.swift in Sources */,
+				65925DC32230D7E20035042E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
